@@ -27,11 +27,13 @@ public class Presenter {
                 model.addStudent(new Student(idStudent(), firstnameStudent(), lastnameStudent(), emailStudent()));
                 break;
             case 2:
-                System.out.println("Por favor ingrese el indice del estudiante que quiere actualizar");
+                view.showIndexUpdate();
                 index = view.scannerInt();
                 if(index >= 0 && index < model.getListStudentProgramIII().size()){
                     model.getListStudentProgramIII().set(index,new Student(idStudent(), firstnameStudent(), lastnameStudent(), emailStudent()));
                     System.out.println("Se actualizo con exito");
+                }else{
+                    System.out.println("Por favor ingrese el Indice correcto!");
                 }
                 break;
             case 3:
@@ -71,4 +73,5 @@ public class Presenter {
         view.showEmailStudentMessage();
         return email = view.scannerString();
     }
+
 }

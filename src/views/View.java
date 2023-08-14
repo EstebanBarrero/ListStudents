@@ -8,6 +8,7 @@ public class View {
     public static final String MESSAGE_FIRSTNAME_STUDENT = "Ingrese el nombre del estudiante";
     public static final String MESSAGE_LASTNAME_STUDENT = "Ingrese el apellido del estudiante";
     public static final String MESSAGE_EMAIL_STUDENT = "Ingrese el correo del estudiante";
+    public static final String INDEX_UPDATE = "Por favor ingrese el indice del estudiante que quiere actualizar";
     private Scanner scanner;
 
     public int scannerInt(){
@@ -41,6 +42,9 @@ public class View {
         System.out.println(MESSAGE_EMAIL_STUDENT);
     }
 
+    public void showIndexUpdate(){
+        System.out.println(INDEX_UPDATE);
+    }
 
 
 
