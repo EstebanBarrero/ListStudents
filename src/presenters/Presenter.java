@@ -37,12 +37,16 @@ public class Presenter {
                 }
                 break;
             case 3:
-                for (int i = 0; i < model.getListStudentProgramIII().size(); i++) {
-                    System.out.println("indice" + i + ": " + model.getListStudentProgramIII().get(i).getIdStudent() + ", " + model.getListStudentProgramIII().get(i).getFirstName() + ", " + model.getListStudentProgramIII().get(i).getLastName()+ ", " + model.getListStudentProgramIII().get(i).getEmail());
+                if ( model.getListStudentProgramIII().size() > 0) {
+                    for (int i = 0; i < model.getListStudentProgramIII().size(); i++) {
+                        System.out.println("indice" + i + ": " + model.getListStudentProgramIII().get(i).getIdStudent() + ", " + model.getListStudentProgramIII().get(i).getFirstName() + ", " + model.getListStudentProgramIII().get(i).getLastName() + ", " + model.getListStudentProgramIII().get(i).getEmail());
+                    }
+                }else {
+                    view.showErrorNullStudent();
                 }
                 break;
             case 4:
-                System.out.println("Por favor ingrese el indice del estudiante que quiere eliminar");
+                view.showIndexDelete();
                 index = view.scannerInt();
                 if(index >= 0 && index < model.getListStudentProgramIII().size()){
                     model.deleteStudent(index);

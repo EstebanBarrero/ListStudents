@@ -9,6 +9,8 @@ public class View {
     public static final String MESSAGE_LASTNAME_STUDENT = "Ingrese el apellido del estudiante";
     public static final String MESSAGE_EMAIL_STUDENT = "Ingrese el correo del estudiante";
     public static final String INDEX_UPDATE = "Por favor ingrese el indice del estudiante que quiere actualizar";
+    public static final String INDEX_DELETE = "Por favor ingrese el indice del estudiante que quiere eliminar";
+    public static final String ERROR_NULL_STUDENTS = "No se encuentra ningun estudiante registrado";
     private Scanner scanner;
 
     public int scannerInt(){
@@ -44,6 +46,13 @@ public class View {
 
     public void showIndexUpdate(){
         System.out.println(INDEX_UPDATE);
+    }
+
+    public void showIndexDelete(){
+        System.out.println(INDEX_DELETE);
+    }
+    public void showErrorNullStudent(){
+        System.out.println(ERROR_NULL_STUDENTS);
     }
 
 
