@@ -10,7 +10,10 @@ public class View {
     public static final String MESSAGE_EMAIL_STUDENT = "Ingrese el correo del estudiante";
     public static final String INDEX_UPDATE = "Por favor ingrese el indice del estudiante que quiere actualizar";
     public static final String INDEX_DELETE = "Por favor ingrese el indice del estudiante que quiere eliminar";
-    public static final String ERROR_NULL_STUDENTS = "No se encuentra ningun estudiante registrado";
+    public static final String ERROR_INDEX_STUDENTS = "No se encuentra el estudiante registrado\nPor favor ingrese el Indice correcto!";
+    public static final String UPDATE = "Se actualizo con exito";
+    public static final String DELETE_INDEX = "Se elimino con exito";
+    public static final String EXIT = "¡Gracias por tu visita!";
     private Scanner scanner;
 
     public View() {
@@ -50,8 +53,18 @@ public class View {
     public void showIndexDelete(){
         System.out.println(INDEX_DELETE);
     }
-    public void showErrorNullStudent(){
-        System.out.println(ERROR_NULL_STUDENTS);
+    public void showErrorIndexStudent(){
+        System.out.println(ERROR_INDEX_STUDENTS);
+    }
+    public void showUpdate(){
+        System.out.println(UPDATE);
+    }
+
+    public void showDelete(){
+        System.out.println(DELETE_INDEX);
+    }
+    public void showExit(){
+        System.out.println(EXIT);
     }
 
 

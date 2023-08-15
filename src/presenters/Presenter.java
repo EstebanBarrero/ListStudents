@@ -31,18 +31,19 @@ public class Presenter {
                 index = view.scannerInt();
                 if(index >= 0 && index < model.getListStudentProgramIII().size()){
                     model.getListStudentProgramIII().set(index,new Student(idStudent(), firstnameStudent(), lastnameStudent(), emailStudent()));
-                    System.out.println("Se actualizo con exito");
+                    view.showUpdate();
                 }else{
-                    System.out.println("Por favor ingrese el Indice correcto!");
+                    view.showErrorIndexStudent();
                 }
                 break;
             case 3:
                 if ( model.getListStudentProgramIII().size() > 0) {
                     for (int i = 0; i < model.getListStudentProgramIII().size(); i++) {
-                        System.out.println("indice" + i + ": " + model.getListStudentProgramIII().get(i).getId() + ", " + model.getListStudentProgramIII().get(i).getFirstname() + ", " + model.getListStudentProgramIII().get(i).getLastname() + ", " + model.getListStudentProgramIII().get(i).getEmail());
+                        System.out.println("indice " + i + ": " + model.getListStudentProgramIII().get(i).getId() + ", " + model.getListStudentProgramIII().get(i).getFirstname() + ", "
+                                + model.getListStudentProgramIII().get(i).getLastname() + ", " + model.getListStudentProgramIII().get(i).getEmail());
                     }
                 }else {
-                    view.showErrorNullStudent();
+                    view.showErrorIndexStudent();
                 }
                 break;
             case 4:
@@ -50,10 +51,11 @@ public class Presenter {
                 index = view.scannerInt();
                 if(index >= 0 && index < model.getListStudentProgramIII().size()){
                     model.deleteStudent(index);
-                    System.out.println("Se elimino con exito");
+                    view.showDelete();
                 }
                 break;
             case 0:
+                view.showExit();
                 return;
         }
         addStudentList();
