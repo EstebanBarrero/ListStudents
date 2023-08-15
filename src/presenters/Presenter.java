@@ -8,9 +8,9 @@ public class Presenter {
     private Model model;
     private View view;
     private int idStudent;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private String firstnameStudent;
+    private String lastnameStudent;
+    private String emailStudent;
 
     public Presenter() {
         model = new Model();
@@ -39,7 +39,7 @@ public class Presenter {
             case 3:
                 if ( model.getListStudentProgramIII().size() > 0) {
                     for (int i = 0; i < model.getListStudentProgramIII().size(); i++) {
-                        System.out.println("indice" + i + ": " + model.getListStudentProgramIII().get(i).getIdStudent() + ", " + model.getListStudentProgramIII().get(i).getFirstName() + ", " + model.getListStudentProgramIII().get(i).getLastName() + ", " + model.getListStudentProgramIII().get(i).getEmail());
+                        System.out.println("indice" + i + ": " + model.getListStudentProgramIII().get(i).getId() + ", " + model.getListStudentProgramIII().get(i).getFirstname() + ", " + model.getListStudentProgramIII().get(i).getLastname() + ", " + model.getListStudentProgramIII().get(i).getEmail());
                     }
                 }else {
                     view.showErrorNullStudent();
@@ -65,17 +65,16 @@ public class Presenter {
 
     public String firstnameStudent(){
         view.showFirstNameStudentMessage();
-        return firstName = view.scannerString();
+        return firstnameStudent = view.scannerString();
     }
 
     public String lastnameStudent(){
         view.showLastNameStudentMessage();
-        return lastName = view.scannerString();
+        return lastnameStudent = view.scannerString();
     }
 
     public String emailStudent(){
         view.showEmailStudentMessage();
-        return email = view.scannerString();
+        return emailStudent = view.scannerString();
     }
-
 }

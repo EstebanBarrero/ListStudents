@@ -13,16 +13,15 @@ public class View {
     public static final String ERROR_NULL_STUDENTS = "No se encuentra ningun estudiante registrado";
     private Scanner scanner;
 
+    public View() {
+        this.scanner = new Scanner(System.in);
+    }
     public int scannerInt(){
         return scanner.nextInt();
     }
 
     public String scannerString(){
         return scanner.next();
-    }
-
-    public View() {
-        this.scanner = new Scanner(System.in);
     }
 
     public void showMenu(){

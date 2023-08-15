@@ -1,39 +1,39 @@
 package models;
 
 public class Student {
-    private int idStudent;
-    private String firstName;
-    private String lastName;
+    private int id;
+    private String firstname;
+    private String lastname;
     private String email;
     public Student(int idStudent, String firstName, String lastName, String email) {
-        this.idStudent = idStudent;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.id = idStudent;
+        this.firstname = firstName;
+        this.lastname = lastName;
         this.email = email;
     }
 
-    public int getIdStudent() {
-        return idStudent;
+    public int getId() {
+        return id;
     }
 
-    public void setIdStudent(int idStudent) {
-        this.idStudent = idStudent;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
